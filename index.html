@@ -3,11 +3,25 @@
 <head>
   <title>Etch-a-Sketch</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  
   <meta charset="UTF-8"/>
 </head>
 <body>
-    <div id = 'container'></div>
+    <div id = 'center' class = 'center'>
+        <div id = 'inputContainerTop' class= 'center-row'>
+            Number of squares per side: 
+            <input type = 'text' name = 'numSides' value = 16>
+        </div>
+        <div id = 'inputContainerBottom' class="center-row">
+            Color: 
+            <select id = 'colorSelector'>
+                <option value = 'red'>Red</option>
+                <option value = 'blue'>Blue</option>
+                <option value = 'green'>Green</option>
+            </select>
+            <button type = 'button' id = 'resetButton'>Reset</button>
+        </div>
+        <div id = 'container'></div>
+    </div>
 </body>
 <script type="text/javascript" src="app.js"></script>
 </html>

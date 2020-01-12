@@ -1,12 +1,20 @@
 //creates a grid that changes color as you move the mouse through it
 
-const container = document.getElementById("container");
+const container = document.getElementById('container');
+const center = document.getElementById('center');
+
 container.addEventListener('mouseover',changeColor);
-const btn = document.createElement('button');
-btn.innerText = "Reset";
+
+const inputContainer = document.getElementById('inputContainerTop');
+
+const textBox = document.querySelector('input');
+const colorSelector = document.getElementById('colorSelector');
+
+const btn = document.getElementById('resetButton');
 btn.addEventListener('click', reset);
-container.parentElement.insertBefore(btn, container);
-let size = 16;
+
+let defaultSize = 16;
+let color = 'red';
 
 function makeRows(rows, cols){
     container.style.setProperty('--grid-rows', rows);
@@ -23,16 +31,16 @@ function changeColor(e){
     {
         console.log(e.target);
         var box = e.target;
-        box.style.backgroundColor = 'red';
+        box.style.backgroundColor = color;
     }
 }
 
 function reset(){
-    size = prompt("How many squares per side?")
     while (container.firstChild){
         container.removeChild(container.firstChild);
     }
-    makeRows(size,size);
+    color = colorSelector.value;
+    makeRows(textBox.value,textBox.value);
 }
 
-makeRows(size,size);
+makeRows(defaultSize,defaultSize);
