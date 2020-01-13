@@ -10,15 +10,17 @@
         <div id = 'inputContainerTop' class= 'center-row'>
             Number of squares per side: 
             <input type = 'text' name = 'numSides' value = 16>
+            <button type = 'button' id = 'resetButton'>Reset</button>
         </div>
         <div id = 'inputContainerBottom' class="center-row">
             Color: 
             <select id = 'colorSelector'>
-                <option value = 'red'>Red</option>
-                <option value = 'blue'>Blue</option>
-                <option value = 'green'>Green</option>
+                <option value = '#ff0000'>Red</option>
+                <option value = '#0000ff'>Blue</option>
+                <option value = '#00ff00'>Green</option>
+                <option value = 'random'>Random</option>
+                <option value = 'gradient'>Gradient</option>
             </select>
-            <button type = 'button' id = 'resetButton'>Reset</button>
         </div>
         <div id = 'container'></div>
     </div>
